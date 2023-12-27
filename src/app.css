@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
-/* user defined CSS variables */
-/* Dark mode dupport: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-using-a-body-class */
+*:not(body) {
+    outline: none!important;
+}
 
-/* Default colors */
 html {
 	--green: #59981a;
+	--green-semi-transparent: rgba(89, 152, 26, 0.5);
 	--white: #fbfcffff;
 	--yellow-greem: #ecf87f;
 	--lime-green: #81b622;
@@ -19,6 +20,7 @@ html[data-theme='light'] {
 	--font-weight: 400;
 	--font-weight-bold: 500;
 	--primary-color: var(--green);
+	--primary-color-semi-transparent: var(--green-semi-transparent);
 }
 /* Dark theme colors */
 html[data-theme='dark'] {
@@ -29,6 +31,7 @@ html[data-theme='dark'] {
 	--font-weight: 300;
 	--font-weight-bold: 500;
 	--primary-color: var(--green);
+	--primary-color-semi-transparent: var(--green-semi-transparent);
 }
 
 body {

@@ -47,13 +47,13 @@
 </button>
 
 <div class="menu" use:melt={$menu}>
-	<div use:melt={$item} class="menu__item" class:higlight={theme === 'light'} on:m-click={light}>
+	<div use:melt={$item} class="menu__item" class:active={theme === 'light'} on:m-click={light}>
 		<Sun />light
 	</div>
-	<div use:melt={$item} class="menu__item" class:higlight={theme === 'dark'} on:m-click={dark}>
+	<div use:melt={$item} class="menu__item" class:active={theme === 'dark'} on:m-click={dark}>
 		<Moon />dark
 	</div>
-	<div use:melt={$item} class="menu__item" class:higlight={theme === 'system'} on:m-click={system}>
+	<div use:melt={$item} class="menu__item" class:active={theme === 'system'} on:m-click={system}>
 		<Monitor />system
 	</div>
 	<div use:melt={$arrow} />
@@ -77,10 +77,14 @@
 		background-color: transparent;
 		color: var(--text-color);
 	}
-	.trigger:hover {
+	.trigger:hover, .trigger:hover:focus-visible, .trigger:hover:focus {
 		background-color: var(--primary-color);
 		color: #fff;
 		border: none;
+	}
+	.trigger:focus-visible, .trigger:focus {
+		color: var(--primary-color);
+		
 	}
 	.menu__item {
 		display: flex;
@@ -90,7 +94,7 @@
 		padding: 8px 16px;
 		background-color: var(--popup-bkg-color);
 	}
-	.menu__item.higlight {
+	.menu__item.active {
 		color: var(--primary-color);
 		font-weight: 500;
 	}
