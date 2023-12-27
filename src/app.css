@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+/* user defined CSS variables */
+/* Dark mode dupport: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-using-a-body-class */
+
+/* Default colors */
+html {
+	--green: #59981a;
+	--white: #fbfcffff;
+	--yellow-greem: #ecf87f;
+	--lime-green: #81b622;
+	--olive-green: #3d550c;
+}
+html[data-theme='light'] {
+	--text-color: #222;
+	--bkg-color: #fff;
+	--app-bar-bkg-color: #eee;
+	--popup-bkg-color: #eee;
+	--font-weight: 400;
+	--font-weight-bold: 500;
+	--primary-color: var(--green);
+}
+/* Dark theme colors */
+html[data-theme='dark'] {
+	--text-color: #eee;
+	--bkg-color: #121212;
+	--popup-bkg-color: #222;
+	--app-bar-bkg-color: #222;
+	--font-weight: 300;
+	--font-weight-bold: 500;
+	--primary-color: var(--green);
+}
+
+body {
+	background-color: var(--bkg-color);
+	color: var(--text-color);
+	font-family: 'Nunito', sans-serif;
+	font-family: 'Source Sans 3', sans-serif;
+	font-weight: var(--font-weight);
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: var(--font-weight-bold);
+}
